@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+RewriteOptions inherit
+RewriteEngine on
+
+# Redirect to HTTPS and www domain
+RewriteCond %{SERVER_PORT} 80 
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^(.*)$ https://www.evizax.tnmprojects.in/$1 [R,L]
+
+# Redirect URLs with trailing slash to without trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Route to Laravel public folder
+RewriteCond %{HTTP_HOST} ^evizax.tnmprojects.in$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.evizax.tnmprojects.in$
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L,QSA]
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php82” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

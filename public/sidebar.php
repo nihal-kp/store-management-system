@@ -1,0 +1,37 @@
+ <?php
+$activePage = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), ".php");
+ ?>
+
+ <aside class="sidebar">
+               <div class="sidebar-container">
+            
+                  <nav class="menu">
+                     <ul class="sidebar-menu metismenu" id="sidebar-menu">
+                         <li>
+                           <a href="/"  class="<?= ($activePage == '') ? 'active-menu':''; ?>">
+                              <img src="images/home.png">
+                              Home 
+                           </a>
+                        </li>
+                        <li>
+                           <a href="country.php"  class="<?= ($activePage == 'country') ? 'active-menu':''; ?> || <?= ($activePage == 'belgium-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'belgium-visa-step') ? 'active-menu':''; ?>  || <?= ($activePage == 'netherlands-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'netherlands-visa') ? 'active-menu':''; ?>  || <?= ($activePage == 'italy-visa') ? 'active-menu':''; ?>  || <?= ($activePage == 'italy-visa-step') ? 'active-menu':''; ?>  || <?= ($activePage == 'uk-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'italy-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'germany-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'germany-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'portugal-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'portugal-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'poland-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'poland-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'norway-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'norway-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'spain-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'spain-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'switzerland-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'switzerland-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'greece-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'greece-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'estonia-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'estonia-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'france-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'france-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'luxembourg-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'luxembourg-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'monaco-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'monaco-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'newzealand-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'newzealand-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'sweden-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'sweden-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'us-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'us-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'armenia-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'armenia-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'qatar-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'qatar-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'india-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'india-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'saudi-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'saudi-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'slovenia-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'slovenia-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'czech-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'czech-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'austria-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'austria-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'malta-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'malta-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'lithuania-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'lithuania-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'azerbaijan-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'azerbaijan-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'uae-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'uae-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'japan-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'japan-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'ireland-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'ireland-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'china-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'china-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'malaysia-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'malaysia-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'hongkong-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'hongkong-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'south-korea-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'south-korea-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'singapore-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'singapore-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'uzbekistan-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'uzbekistan-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'australia-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'australia-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'canada-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'canada-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'brazil-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'brazil-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'russia-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'russia-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'vietnam-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'vietnam-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'thailand-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'thailand-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'kenya-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'kenya-visa-step') ? 'active-menu':''; ?> || <?= ($activePage == 'indonesia-visa') ? 'active-menu':''; ?> || <?= ($activePage == 'indonesia-visa-step') ? 'active-menu':''; ?>">
+                           <img src="images/country.png">
+                              Countries 
+                           </a>
+                        </li>
+                       
+                        <li>
+                           <a href="settings.php" class="<?= ($activePage == 'settings') ? 'active-menu':''; ?>">
+                            <img src="images/settings.png" >
+
+                           Settings
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <footer class="sidebar-footer">
+                  <ul class="sidebar-menu metismenu" id="customize-menu">
+                  </ul>
+               </footer>
+            </aside>
