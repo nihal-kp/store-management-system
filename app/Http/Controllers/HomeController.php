@@ -52,25 +52,4 @@ class HomeController extends Controller
         return view('welcome', compact('userLocation', 'stores'));
     }
 
-    public function nearbyStores(Request $request)
-    {
-        $userLatitude = $request->input('latitude');
-        $userLongitude = $request->input('longitude');
-
-        $stores = Store::select('*')
-            ->selectRaw("(
-                6371 * acos(
-                    cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) +
-                    sin(radians(?)) * sin(radians(latitude))
-                )
-            ) AS distance", [$userLatitude, $userLongitude, $userLatitude])
-            ->where('status', 1)
-            ->orderBy('distance')
-            ->get();
-
-        // Return the stores as a JSON response
-        return response()->json([
-            'stores' => $stores
-        ]);
-    }
 }
