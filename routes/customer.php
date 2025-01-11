@@ -28,7 +28,6 @@ Route::get('account-under-verification', 'Auth\LoginController@underVerification
 // });
 Route::middleware(['auth:customer', 'auth.session:customer', 'checkStatus:customer'])->group(function () {
     Route::get('/', 'HomeController@index')->name('welcome');
-    Route::post('nearby-stores', 'HomeController@nearbyStores')->name('nearby-stores');
     Route::view('settings', 'settings')->name('settings');
     Route::put('account/{id}/update_password','CustomerController@updatePassword')->name('account.updatePassword');
     
